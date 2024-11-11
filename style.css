@@ -1,0 +1,328 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+@keyframes scaleIn {
+    0% {
+      transform: scale(1.3);  /* Kezdő méret (nagyobb) */
+      opacity: 0;  /* Kezdő átlátszóság (rejtett) */
+    }
+    100% {
+      transform: scale(1);  /* Végső méret (normál) */
+      opacity: 1;  /* Végső átlátszóság (látható) */
+    }
+  }
+  
+  .home-link, .rules-link, .about-link, i.fab.fa-tiktok, i.fab.fa-youtube, i.fab.fa-instagram, .separator, .spectrum-roleplay, .buttons, form {
+    opacity: 0;  /* Kezdetben rejtett */
+    transform: scale(1);  /* Kezdetben nagyobb */
+  }
+  
+  .home-link, .rules-link, .about-link, i.fab.fa-tiktok, i.fab.fa-youtube, i.fab.fa-instagram, .separator, .spectrum-roleplay, .buttons, form {
+    opacity: 1;  /* Kezdetben rejtett */
+    animation: scaleIn 1.5s ease-in-out;  /* 1.5 másodperc alatt megy végbe */
+  }
+
+body {
+    font-family: 'Inconsolata', monospace; /* Inconsolata ExtraLight 200 font */
+    background-size: cover;
+    background-image: url('image.png');
+}
+
+
+header {
+    width: 100%;
+    padding: 20px;
+    background-color: rgba(0, 0, 0, 0);
+    display: flex;
+    align-items: center;
+    justify-content: right;
+    position: absolute;
+    right: 40px;
+    text-shadow: 0px 0px 7px rgb(255, 255, 255); /* Szöveg árnyék hozzáadása */
+}
+
+
+h1 {
+    font-size: 24px;
+    font-weight: 200; /* Nagyon vastag szöveg */
+}
+
+nav {
+    display: flex;
+    justify-content: center; /* Középre igazítja a gombokat */
+    align-items: center;
+    gap: 5px; /* Gombok közötti távolság */
+}
+
+a {
+    color: #fff;
+    font-size: 18px;
+    font-weight: 200; /* Nagyon vastag szöveg */    text-decoration: none;
+    padding: 10px 20px;
+    border-radius: 5px;
+    position: relative; /* Pozicionálás a ::after elemhez */
+    transition: background-color 0.3s ease, transform 0.3s ease; /* Animációk hozzáadása */
+    letter-spacing: 1px; /* Betűk közötti távolság */
+}
+
+.home-link {
+    color: #fff;
+    font-size: 31px;
+    font-weight: 200; /* Nagyon vastag szöveg */
+    text-decoration: none;
+    padding: 10px 20px;
+    border-radius: 5px;
+    position: relative; /* Pozicionálás a ::after elemhez */
+    transition: background-color 0.3s ease, transform 0.3s ease; /* Animációk hozzáadása */
+    letter-spacing: 1px; /* Betűk közötti távolság */
+}
+
+.home-link::after {
+    content: ''; /* Üres tartalom, mivel ez egy dekorációs elem */
+    position: absolute;
+    bottom: 4px; /* Az aláhúzás az alján legyen */
+    left: 0;
+    width: 100%;
+    height: 2px; /* Az aláhúzás vastagsága */
+    background-color: #fff; /* Az aláhúzás színe */
+    transform: scaleX(0); /* Kezdetben a skálázás 0, így nem látszik */
+    transition: transform 0.3s ease; /* Aláhúzás animálása */
+}
+
+.home-link:hover {
+    transform: scale(1.3); /* Gomb növekedése */
+}
+
+.home-link:hover::after {
+    transform: scaleX(0.7); /* Aláhúzás animálása a kurzor fölé húzása után */
+}
+
+.rules-link {
+    color: #fff;
+    font-size: 31px;
+    font-weight: 200; /* Nagyon vastag szöveg */
+    text-decoration: none;
+    padding: 10px 20px;
+    border-radius: 5px;
+    position: relative; /* Pozicionálás a ::after elemhez */
+    transition: background-color 0.3s ease, transform 0.3s ease; /* Animációk hozzáadása */
+    letter-spacing: 1px; /* Betűk közötti távolság */
+}
+
+.rules-link::after {
+    content: ''; /* Üres tartalom, mivel ez egy dekorációs elem */
+    position: absolute;
+    bottom: 4px; /* Az aláhúzás az alján legyen */
+    left: 0;
+    width: 100%;
+    height: 2px; /* Az aláhúzás vastagsága */
+    background-color: #fff; /* Az aláhúzás színe */
+    transform: scaleX(0); /* Kezdetben a skálázás 0, így nem látszik */
+    transition: transform 0.3s ease; /* Aláhúzás animálása */
+}
+
+.rules-link:hover {
+    transform: scale(1.3); /* Gomb növekedése */
+}
+
+.rules-link:hover::after {
+    transform: scaleX(0.7); /* Aláhúzás animálása a kurzor fölé húzása után */
+}
+
+.about-link {
+    color: #fff;
+    font-size: 31px;
+    font-weight: 200; /* Nagyon vastag szöveg */
+    text-decoration: none;
+    padding: 10px 20px;
+    border-radius: 5px;
+    position: relative; /* Pozicionálás a ::after elemhez */
+    transition: background-color 0.3s ease, transform 0.3s ease; /* Animációk hozzáadása */
+    letter-spacing: 1px; /* Betűk közötti távolság */
+}
+
+.about-link::after {
+    content: ''; /* Üres tartalom, mivel ez egy dekorációs elem */
+    position: absolute;
+    bottom: 4px; /* Az aláhúzás az alján legyen */
+    left: 0;
+    width: 100%;
+    height: 2px; /* Az aláhúzás vastagsága */
+    background-color: #fff; /* Az aláhúzás színe */
+    transform: scaleX(0); /* Kezdetben a skálázás 0, így nem látszik */
+    transition: transform 0.3s ease; /* Aláhúzás animálása */
+}
+
+.about-link:hover {
+    transform: scale(1.3); /* Gomb növekedése */
+}
+
+.about-link:hover::after {
+    transform: scaleX(0.7); /* Aláhúzás animálása a kurzor fölé húzása után */
+}
+
+/* TikTok ikon testreszabása */
+i.fab.fa-tiktok {
+    font-size: 33px; /* Méret */
+    color: #ffffff;  /* TikTok hivatalos színe */
+    transform: scale(1.0); /* Gomb növekedése */
+    transition: transform 0.5s ease; /* Aláhúzás animálása */
+    text-shadow: 0px 0px 2px rgb(255, 255, 255); /* Szöveg árnyék hozzáadása */
+}
+
+i.fab.fa-tiktok:hover {
+    color: #ffffff; /* Hover szín */
+    transform: scale(1.3); /* Gomb növekedése */
+    transition: transform 0.5s ease; /* Aláhúzás animálása */
+}
+
+i.fab.fa-instagram {
+    font-size: 33px; /* Méret */
+    color: #ffffff;  /* TikTok hivatalos színe */
+    transform: scale(1.0); /* Gomb növekedése */
+    transition: transform 0.5s ease; /* Aláhúzás animálása */
+    text-shadow: 0px 0px 2px rgb(255, 255, 255); /* Szöveg árnyék hozzáadása */
+}
+
+i.fab.fa-instagram:hover {
+    color: #ffffff; /* Hover szín */
+    transform: scale(1.3); /* Gomb növekedése */
+    transition: transform 0.5s ease; /* Aláhúzás animálása */
+}
+
+i.fab.fa-youtube {
+    font-size: 33px; /* Méret */
+    color: #ffffff;  /* TikTok hivatalos színe */
+    transform: scale(1.0); /* Gomb növekedése */
+    transition: transform 0.5s ease; /* Aláhúzás animálása */
+    text-shadow: 0px 0px 2px rgb(255, 255, 255); /* Szöveg árnyék hozzáadása */
+}
+
+i.fab.fa-youtube:hover {
+    color: #ffffff; /* Hover szín */
+    transform: scale(1.3); /* Gomb növekedése */
+    transition: transform 0.5s ease; /* Aláhúzás animálása */
+}
+
+/* A függőleges vonal stílusa */
+.separator {
+    width: 1px; /* A vonal vastagsága */
+    height: 60px; /* A vonal magassága */
+    background-color: #fff; /* A vonal színe */
+    margin: 0 20px; /* Távolság a többi elemtől */
+    box-shadow: 0px 0px 10px rgb(255, 255, 255); /* Szöveg árnyék hozzáadása */
+}
+
+.spectrum-roleplay {
+    text-align: left; /* Középre igazítja a szöveget */
+    position: absolute;
+    top: 185px;
+    left: 280px;
+}
+
+.spectrum {
+    font-size: 120px; /* A "Spectrum" szöveg mérete */
+    color: #38ac34; /* Kék szín, a Spectrum-hoz illeszkedő szín */
+    text-shadow: 0px 0px 7px #38ac34; /* Szöveg árnyék hozzáadása */
+}
+
+.roleplay {
+    font-size: 90px; /* A "Roleplay" szöveg mérete */
+    color: #ffffff; /* Zöld szín, a Roleplay-hez illeszkedő szín */
+    position: absolute;
+    left: 10px;
+    text-shadow: 0px 0px 10px rgb(255, 255, 255); /* Szöveg árnyék hozzáadása */
+}
+
+.buttons {
+    position: absolute;
+    top: 440px;
+    left: 288px;
+}
+
+a.btn {
+    display: inline-block;
+    padding: 15px 25px;
+    font-size: 21px;
+    border-radius: 40px;
+    margin: 10px;
+    box-shadow: 0px 0px 10px rgba(255, 255, 255, 0.5);
+    transition: transform 0.3s ease, background-color 0.3s ease;
+}
+
+#button1 {
+    color: #000;
+    background-color: #8a8a8a;
+    font-weight: 700; /* Nagyon vastag szöveg */
+}
+
+#button2 {
+    color: #fff;
+    background-color: rgba(138, 138, 138, 0);
+    font-weight: 700; /* Nagyon vastag szöveg */
+}
+
+#button1:hover, #button2:hover {
+    transform: scale(1.17);
+}
+
+
+#button2:hover {
+    background-color: rgba(255, 0, 0, 0);
+}
+
+form {
+    position: absolute;
+    top: 100px;
+    left: 100px;
+    background-color: #00000094;
+    border-radius: 40px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.459);
+    padding: 20px;
+    width: 250px;
+    height: 400px;
+    box-sizing: border-box;
+}
+
+/* Címek stílusai */
+label {
+    font-size: 15px;
+    font-weight: bold;
+    margin-bottom: 8px;
+    display: block;
+    color: #ffffff;
+    
+}
+
+/* Input mezők stílusai */
+input[type="text"] {
+    width: 100%;
+    padding: 10px;
+    margin-bottom: 15px;
+    border: 1px solid #ccc;
+    border-radius: 40px;
+    font-size: 14px;
+    box-sizing: border-box;
+}
+
+/* Submit gomb stílusai */
+button[type="submit"] {
+    width: 100%;
+    padding: 10px;
+    background-color: #4CAF50;
+    color: white;
+    font-size: 16px;
+    border: none;
+    border-radius: 40px;
+    cursor: pointer;
+    transition: background-color 0.3s ease;
+}
+
+button[type="submit"]:hover {
+    background-color: #45a049;
+}
+
+

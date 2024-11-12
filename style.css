@@ -15,24 +15,20 @@
     }
   }
   
-  .home-link, .rules-link, .about-link, i.fab.fa-tiktok, i.fab.fa-youtube, i.fab.fa-instagram, .separator, .spectrum-roleplay, .buttons, form {
+  .home-link, .rules-link, .about-link, i.fab.fa-tiktok, i.fab.fa-youtube, i.fab.fa-instagram, .separator, .spectrum-roleplay, .buttons, form, .hamarosan {
     opacity: 0;  /* Kezdetben rejtett */
     transform: scale(1);  /* Kezdetben nagyobb */
   }
   
-  .home-link, .rules-link, .about-link, i.fab.fa-tiktok, i.fab.fa-youtube, i.fab.fa-instagram, .separator, .spectrum-roleplay, .buttons, form {
+  .home-link, .rules-link, .about-link, i.fab.fa-tiktok, i.fab.fa-youtube, i.fab.fa-instagram, .separator, .spectrum-roleplay, .buttons, form, .hamarosan {
     opacity: 1;  /* Kezdetben rejtett */
     animation: scaleIn 1.5s ease-in-out;  /* 1.5 másodperc alatt megy végbe */
   }
 
 body {
     font-family: 'Inconsolata', monospace; /* Inconsolata ExtraLight 200 font */
-    background-image: url('image.png');
-    background-repeat: no-repeat;
-    background-size: cover;
-    background-attachment: fixed; /* A háttér rögzítése a görgetésnél */
-    background-position: center center;
 }
+
 
 header {
     width: 100%;
@@ -251,13 +247,13 @@ a.btn {
     font-size: 21px;
     border-radius: 40px;
     margin: 10px;
-    box-shadow: 0px 0px 10px rgba(255, 255, 255, 0.5);
+    box-shadow: 0px 0px 10px rgba(255, 255, 255, 0.774);
     transition: transform 0.3s ease, background-color 0.3s ease;
 }
 
 #button1 {
     color: #000;
-    background-color: #8a8a8a;
+    background-color: #d8d7d7;
     font-weight: 700; /* Nagyon vastag szöveg */
 }
 
@@ -325,6 +321,27 @@ button[type="submit"] {
 
 button[type="submit"]:hover {
     background-color: #45a049;
+}
+
+.main-content {
+    height: 100vh; /* A tartalom magassága */
+    background: url('image.png') no-repeat center center;
+    background-size: cover;
+}
+
+.footer-space {
+    height: 0vh; /* Extra görgetési terület magassága */
+    background: linear-gradient(rgb(0, 0, 0), rgb(0, 0, 0) 90%); /* A teteje fehér, az alja szürke */
+}
+
+.hamarosan {
+    font-size: 120px; /* A "Spectrum" szöveg mérete */
+    text-shadow: 0px 0px 10px #ffffff;
+    text-align: left; /* Középre igazítja a szöveget */
+    color:rgb(255, 255, 255);
+    position: absolute;
+    top: 155px;
+    left: 140px;
 }
 
 

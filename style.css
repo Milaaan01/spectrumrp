@@ -36,6 +36,11 @@ body {
 
 @media only screen and (max-width: 768px) {
   body {
+    background-image: url('image.png');
+    background-repeat: no-repeat;
+    background-size: cover; 
+    background-position: center center;
+    background-attachment: scroll
     font-size: 14px; /* Kisebb betűméret mobilon */
   }
   .container {

@@ -27,9 +27,9 @@
 
 body {
     font-family: 'Inconsolata', monospace; /* Inconsolata ExtraLight 200 font */
-    background-size: cover;
     background-image: url('image.png');
     background-repeat: no-repeat;
+    background-size: cover;
     background-attachment: fixed; /* A háttér rögzítése a görgetésnél */
     background-position: center center;
 }
